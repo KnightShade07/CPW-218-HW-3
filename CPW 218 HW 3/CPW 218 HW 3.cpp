@@ -3,9 +3,19 @@
 
 #include <iostream>
 
+//Note: if you have using namespace std, you do not need to have std in front of every cout
+//if you want to print something out to the user.
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    //When doing multiple couts, to save time, just type cout << "" and copy/paste however many you need.
+    //in this case, we need 4.
+
+    cout << "We will do a sum for you.";
+    cout << "How many terms do you want?";
+    cout << "";
+    cout << "Press any key to continue . . .";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
