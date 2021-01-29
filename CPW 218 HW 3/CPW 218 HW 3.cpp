@@ -2,6 +2,9 @@
 //
 
 #include <iostream>
+#include <string>
+#include<iomanip>
+#include<cstdlib>
 
 //Note: if you have using namespace std, you do not need to have std in front of every cout
 //if you want to print something out to the user.
@@ -9,15 +12,18 @@ using namespace std;
 
 int main()
 {
-    //When doing multiple couts, to save time, just type cout << "" and copy/paste however many you need.
-    //in this case, we need 4.
-
-    cout << "We will do a sum for you.\n";
-    cout << "How many terms do you want?";
-    int inputNum;
-    cin >> inputNum;
-    cout << inputNum << "\n";
-    cout << "Press any key to continue . . .";
+    const int TERM_NUMBER = 624;
+    double equation = 0;
+   
+    //NOTE: for loop was set to int i = 0
+    //instead of int i = 1, so thats why
+    //it was printing one number off from the expected result.
+    for (int i = 1; i <= TERM_NUMBER; i++)
+    {
+        equation += (1 / (sqrt(i) + sqrt(i + 1)));
+    }
+    
+    cout << setprecision(2) << fixed << equation << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
