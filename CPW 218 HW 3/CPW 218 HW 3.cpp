@@ -1,5 +1,13 @@
 // CPW 218 HW 3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//CPW 218 HW 3 - Loops
+//Ethen Oliva
+//Instructor: Ken Meerdink
+//Program Description:
+/*
+*  This program will ask the user for a number of terms,
+*  then calculate a sum using an equation
+*  with a for loop.
+*/
 
 #include <iostream>
 #include <string>
@@ -13,7 +21,9 @@ using namespace std;
 int main()
 {
     //since we're doing the extra credit, we want a new
-    //variable for user input
+    //variable for user input instead
+    //of the TERM_NUMBER constant.
+
     //const int TERM_NUMBER = 624;
 
     int numInput;
@@ -21,17 +31,23 @@ int main()
     cout << "We will do a sum for you\n";
     cout << "How many terms do you want?";
     cin >> numInput;
-   
-    //NOTE: for loop was set to int i = 0
-    //instead of int i = 1, so thats why
-    //it was printing one number off from the expected result.
-    for (int i = 1; i <= numInput; i++)
+    if (numInput > 0) {
+        //NOTE: for loop was set to int i = 0
+        //instead of int i = 1, so thats why
+        //it was printing one number off from the expected result.
+        for (int i = 1; i <= numInput; i++)
+        {
+            equation += (1 / (sqrt(i) + sqrt(i + 1)));
+        }
+
+        cout << setprecision(2) << fixed << equation << endl;
+        cout << "Press any key to continue. . ." << endl;
+    }
+    else
     {
-        equation += (1 / (sqrt(i) + sqrt(i + 1)));
+        cout << "Invalid Number. Program only accepts numbers above 0." << endl;
     }
     
-    cout << setprecision(2) << fixed << equation << endl;
-    cout << "Press any key to continue. . ." << endl;
 }
 
 
