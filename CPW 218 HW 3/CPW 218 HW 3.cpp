@@ -16,7 +16,33 @@ int main()
     cout << "How many terms do you want?";
     int inputNum;
     cin >> inputNum;
-    cout << inputNum << "\n";
+    //The one at the top of the equation
+    int TopNum = 1;
+    // first number on the bottom
+    int firstBottomNumber = 1;
+    //second number on the bottom that is also squared.
+    int secondSquaredNumber = std::sqrt(2);
+    double outputNum = 0;
+
+    /*
+    * The equation itself looks like this:
+    * 
+    *                 1                  1
+    *            -----------  +  -----------------
+    *            1 + sqrt(2)     sqrt(2) + sqrt(3)
+    */
+    for (size_t i = 0; i < inputNum; i++)
+    {
+        outputNum += (static_cast<double>(TopNum)) / firstBottomNumber + secondSquaredNumber;
+        
+        if (firstBottomNumber >= 2)
+        {
+            firstBottomNumber = sqrt(firstBottomNumber);
+        }
+        firstBottomNumber++;
+        secondSquaredNumber++;
+    }
+    cout << outputNum << "\n";
     cout << "Press any key to continue . . .";
 }
 
