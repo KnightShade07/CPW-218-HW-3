@@ -1,5 +1,13 @@
 // CPW 218 HW 3.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//CPW 218 HW 3 - Loops
+//Ethen Oliva
+//Instructor: Ken Meerdink
+//Program Description:
+/*
+*  This program will ask the user for a number of terms,
+*  then calculate a sum using an equation
+*  with a for loop.
+*/
 
 #include <iostream>
 #include <string>
@@ -13,7 +21,9 @@ using namespace std;
 int main()
 {
     //since we're doing the extra credit, we want a new
-    //variable for user input
+    //variable for user input instead
+    //of the TERM_NUMBER constant.
+
     //const int TERM_NUMBER = 624;
 
     int numInput;
