@@ -12,13 +12,18 @@ using namespace std;
 
 int main()
 {
-    const int TERM_NUMBER = 624;
+    //since we're doing the extra credit, we want a new
+    //variable for user input
+    //const int TERM_NUMBER = 624;
+
+    int numInput;
     double equation = 0;
+    cin >> numInput;
    
     //NOTE: for loop was set to int i = 0
     //instead of int i = 1, so thats why
     //it was printing one number off from the expected result.
-    for (int i = 1; i <= TERM_NUMBER; i++)
+    for (int i = 1; i <= numInput; i++)
     {
         equation += (1 / (sqrt(i) + sqrt(i + 1)));
     }
