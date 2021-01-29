@@ -2,6 +2,9 @@
 //
 
 #include <iostream>
+#include <string>
+#include<iomanip>
+#include<cstdlib>
 
 //Note: if you have using namespace std, you do not need to have std in front of every cout
 //if you want to print something out to the user.
@@ -9,41 +12,18 @@ using namespace std;
 
 int main()
 {
-    //When doing multiple couts, to save time, just type cout << "" and copy/paste however many you need.
-    //in this case, we need 4.
-
-    cout << "We will do a sum for you.\n";
-    cout << "How many terms do you want?";
-    int inputNum;
-    cin >> inputNum;
-    //The one at the top of the equation
-    int TopNum = 1;
-    // first number on the bottom
-    int firstBottomNumber = 1;
-    //second number on the bottom that is also squared.
-    int secondSquaredNumber = std::sqrt(2);
-    double outputNum = 0;
-
-    /*
-    * The equation itself looks like this:
-    * 
-    *                 1                  1
-    *            -----------  +  -----------------
-    *            1 + sqrt(2)     sqrt(2) + sqrt(3)
-    */
-    for (size_t i = 0; i < inputNum; i++)
+    const int TERM_NUMBER = 624;
+    double equation = 0;
+   
+    //NOTE: for loop was set to int i = 0
+    //instead of int i = 1, so thats why
+    //it was printing one number off from the expected result.
+    for (int i = 1; i <= TERM_NUMBER; i++)
     {
-        outputNum += (static_cast<double>(TopNum)) / firstBottomNumber + secondSquaredNumber;
-        
-        if (firstBottomNumber >= 2)
-        {
-            firstBottomNumber = sqrt(firstBottomNumber);
-        }
-        firstBottomNumber++;
-        secondSquaredNumber++;
+        equation += (1 / (sqrt(i) + sqrt(i + 1)));
     }
-    cout << outputNum << "\n";
-    cout << "Press any key to continue . . .";
+    
+    cout << setprecision(2) << fixed << equation << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
