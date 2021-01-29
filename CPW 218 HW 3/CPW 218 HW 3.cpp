@@ -12,9 +12,11 @@ int main()
     //When doing multiple couts, to save time, just type cout << "" and copy/paste however many you need.
     //in this case, we need 4.
 
-    cout << "We will do a sum for you.";
+    cout << "We will do a sum for you.\n";
     cout << "How many terms do you want?";
-    cout << "";
+    int inputNum;
+    cin >> inputNum;
+    cout << inputNum << "\n";
     cout << "Press any key to continue . . .";
 }
 
